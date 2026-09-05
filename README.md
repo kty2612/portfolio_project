@@ -62,7 +62,7 @@ This project is currently under development.
 
 The initial implementation focuses on establishing a Dockerized two-tier architecture consisting of a Flask web application and PostgreSQL database. Additional API endpoints and database functionality will be implemented in future development stages.
 
-## ## Testing
+## Testing
 
 This project uses `pytest` and `pytest-flask` to test the Flask API.
 
