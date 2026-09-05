@@ -1,20 +1,26 @@
 from flask import Flask, jsonify
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
 
-
-@app.route("/")
-def home():
-    return jsonify({
-        "message": "Company Domain Verification API"
+    @app.route("/")
+    def home():
+        return jsonify({
+            "message": "Company Domain Verification API"
     })
 
-
-@app.route("/health")
-def health_check():
-    return jsonify({
-        "status": "healthy"
+    @app.route("/health")
+    def health_check():
+        return jsonify({
+            "status": "healthy"
     })
+
+    return app
+
+
+
+app = create_app()
+
 
 
 if __name__ == "__main__":

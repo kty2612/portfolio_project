@@ -61,3 +61,21 @@ The application will eventually support:
 This project is currently under development.
 
 The initial implementation focuses on establishing a Dockerized two-tier architecture consisting of a Flask web application and PostgreSQL database. Additional API endpoints and database functionality will be implemented in future development stages.
+
+## ## Testing
+
+This project uses `pytest` and `pytest-flask` to test the Flask API.
+
+The current test suite verifies that:
+
+* The home endpoint returns a successful HTTP 200 response and the expected JSON message.
+* The health-check endpoint returns a successful HTTP 200 response and the expected health status.
+* An invalid endpoint returns an HTTP 404 response.
+
+To run the tests locally, activate the project's virtual environment and run:
+
+```bash
+pytest
+```
+
+The tests use Flask's test client to send HTTP requests to the application without requiring a browser or external web server.
